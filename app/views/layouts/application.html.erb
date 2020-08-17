@@ -9,9 +9,21 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
+      
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
 
     <%= yield %>
+
+    <div id="page-content">
+
+    </div>
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Anthony &copy; <%= link_to "Alpha Blog", root_path , id: "footertext" %></small>
+      </div>
+    </footer>
   </body>
 </html>
